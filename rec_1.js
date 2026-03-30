@@ -1,33 +1,43 @@
+const prompt = require("prompt-sync")();
+
 const perguntas = [
-    {
-      pergunta: "Qual é a capital do Brasil?",
-      resposta: "brasilia"
-    },
-    {
-      pergunta: "Quanto é 2 + 2?",
-      resposta: "4"
-    },
-    {
-      pergunta: "Qual linguagem estamos usando?",
-      resposta: "javascript"
-    }
-  ];
-  
-  let pontos = 0;
-  
-  for (let i = 0; i < perguntas.length; i++) {
-  
-    let respostaUsuario = prompt(perguntas[i].pergunta);
-  
-    respostaUsuario = respostaUsuario.toLowerCase();
-  
-     
-    if (respostaUsuario === perguntas[i].resposta) {
-      alert("Acertou!");
-      pontos++;
-    } else {
-      alert("Errou! A resposta era: " + perguntas[i].resposta);
-    }
+  {
+    pergunta: "Qual foi o primeiro pais que o Brasil se conectou?",
+    resposta: "Portugal"
+  },
+  {
+    pergunta: "Qual a raiz quarta de 625?",
+    resposta: "5"
+  },
+  {
+    pergunta: "Qual o jogo mais antigo?",
+    resposta: "Senet"
   }
+];
+
+let pontos = 0;
+
+console.log("**** QUIZ ****\n");
+
+for (let i = 0; i < perguntas.length; i++) {
   
-  alert("Você fez " + pontos + " pontos de " + perguntas.length);
+  
+  let respostaUsuario = prompt("Pergunta " + (i + 1) + ": " + perguntas[i].pergunta + " ");
+
+  if (respostaUsuario.toLowerCase() === perguntas[i].resposta) {
+    console.log("Acertou!\n");
+    pontos++;
+  } else {
+    console.log("Errou! Resposta correta: " + perguntas[i].resposta + "\n");
+  }
+}
+
+console.log("Você fez " + pontos + " de " + perguntas.length + " pontos!");
+
+if (pontos === perguntas.length) {
+  console.log("Perfeito!");
+} else if (pontos >= 2) {
+  console.log("Mandou bem!");
+} else {
+  console.log("Bora treinar mais!");
+}
