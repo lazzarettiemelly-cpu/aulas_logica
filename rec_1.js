@@ -3,7 +3,7 @@ const prompt = require("prompt-sync")();
 const perguntas = [
   {
     pergunta: "Qual foi o primeiro pais que o Brasil se conectou?",
-    resposta: "Portugal"
+    resposta: "portugal"
   },
   {
     pergunta: "Qual a raiz quarta de 625?",
@@ -11,7 +11,7 @@ const perguntas = [
   },
   {
     pergunta: "Qual o jogo mais antigo?",
-    resposta: "Senet"
+    resposta: "senet"
   }
 ];
 
